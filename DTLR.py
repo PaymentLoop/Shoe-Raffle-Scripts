@@ -1,4 +1,5 @@
 import requests
+import time
 from random import getrandbits
 from bs4 import BeautifulSoup
 url = 'http://dtlr.us5.list-manage.com/subscribe/post?u=e63d3ec47059b6abdf6a36c8f&id=759208b064'
@@ -30,6 +31,7 @@ def main(limit):
 
 
         }
+        time.sleep(30)
         resp = session.post(url, data=payload, headers=headers)
         print('Raffle has been entered {}/{} times.'.format(i, limit))
 
